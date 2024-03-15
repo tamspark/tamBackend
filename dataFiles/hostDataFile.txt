@@ -1,0 +1,19 @@
+GuestName	Contact	Nationality	NumberOfAdults	NumberOfChildren	NumberOfInfants	ArrivalDate	DepartureDate	NumberOfNights	BookedDate	ListingName	ChannelName
+Redis Halili	redis.halili@sparklab.al	Albania	2	0	0	2024-01-16	2024-01-17	1	2024-01-10 15:02	Cozy Retreat Room	Blocked channel
+Redis Halili	redis.halili@sparklab.al	Albania	2	0	0	2024-01-17	2024-01-18	1	2024-01-10 15:57	Cozy Retreat Room	Homepage
+Redis Halili	redis.halili@sparklab.al	Albania	2	0	0	2024-01-18	2024-01-27	9	2024-01-10 16:05	Cozy Retreat Room	Homepage
+Redis Halili	redis.halili@sparklab.al	Albania	2	0	0	2024-01-27	2024-02-12	16	2024-01-10 16:06	Cozy Retreat Room	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-12	2024-02-13	1	2024-01-10 16:07	Cozy Retreat Room	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-13	2024-02-14	1	2024-01-10 16:06	Cozy Retreat Room	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-15	2024-02-17	2	2024-01-10 16:09	Cozy Retreat Room	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-17	2024-02-29	12	2024-01-10 16:09	Cozy Retreat Room	Homepage
+Redis Halili	redon.gongo@sparklab.al	Albania	2	0	0	2024-05-16	2024-05-17	1	2024-01-31 11:52	Cozy Retreat Room	Blocked channel
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-01-25	2024-02-05	11	2024-01-17 11:49	Ocean View Penthouse	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-25	2024-03-05	9	2024-01-17 11:49	Ocean View Penthouse	Homepage
+Redis Halili	redis.halili@sparklab.al	Albania	2	0	0	2024-03-05	2024-03-09	4	2024-01-17 15:30	Ocean View Penthouse	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-01-11	2024-01-12	1	2024-01-11 17:52	Tirana Apartment	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-01-12	2024-01-13	1	2024-01-12 11:51	Tirana Apartment	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-01-17	2024-01-29	12	2024-01-10 17:09	Tirana Apartment	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-11	2024-02-12	1	2024-01-11 17:33	Tirana Apartment	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-02-17	2024-02-18	1	2024-01-10 17:37	Tirana Apartment	Homepage
+Redon Gongo	redon.gongo@sparklab.al	Albania	2	0	0	2024-03-25	2024-04-05	11	2024-01-12 15:28	Tirana Apartment	Homepage
