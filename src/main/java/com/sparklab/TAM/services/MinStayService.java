@@ -25,7 +25,7 @@ public class MinStayService {
     }
 
     public List<MinStayRule> findAllMinStayRules() {
-        Sort sortByDay = Sort.by("day").ascending();
+        Sort sortByDay = Sort.by("day").descending();
         return minStayRepository.findAll(sortByDay);
     }
 }
