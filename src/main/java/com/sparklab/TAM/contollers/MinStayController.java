@@ -37,6 +37,16 @@ public class MinStayController {
             return new ResponseEntity<>("Bad Request", HttpStatus.BAD_REQUEST);
         }
     }
+    @GetMapping("getMinStaysByUser/{userId}")
+    public ResponseEntity<?> getAllMinStayRulesPerUser(@PathVariable String userId) {
+        try {
+            return new ResponseEntity<>(minStayService.findAllMinStayRulesPerUser(userId), HttpStatus.OK);
+        } catch (ApiCallError e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Bad Request", HttpStatus.BAD_REQUEST);
+        }
+    }
 
 
 }

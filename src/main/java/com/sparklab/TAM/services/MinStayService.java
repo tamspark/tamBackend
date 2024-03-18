@@ -28,4 +28,10 @@ public class MinStayService {
         Sort sortByDay = Sort.by("day").descending();
         return minStayRepository.findAll(sortByDay);
     }
+    public List<MinStayRule> findAllMinStayRulesPerUser(String userId) {
+        Long parseUserId=Long.parseLong(userId);
+        Sort sortByDay = Sort.by("day").ascending();
+        return minStayRepository.findByUserId(parseUserId,sortByDay);
+    }
+
 }

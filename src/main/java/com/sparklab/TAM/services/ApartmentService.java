@@ -22,10 +22,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 @Service
@@ -100,16 +97,16 @@ public class ApartmentService {
             List<ApartmentOption> apartmentOptions = apartmentOptionRepository.findAll();
             List<ApartmentLinkedapartmentOptions> apartmentLinkedapartmentOptionsList = apartmentLinkedApartmentOptionRepository.findByApartmentId(parseApartmentId);
 
-            // Map to group apartment options by category
-            Map<ApartmentOptionCategory, List<ApartmentOptionswithStatuses>> categoryMap = new HashMap<>();
+
+            TreeMap<ApartmentOptionCategory, List<ApartmentOptionswithStatuses>> categoryMap = new TreeMap<>(Comparator.comparingLong(ApartmentOptionCategory::getId));
 
             for (ApartmentOption apartmentOption : apartmentOptions) {
                 ApartmentOptionCategory category = apartmentOption.getApartmentOptionCategory();
 
-                // Create a new list for the category if it doesn't exist in the map
+
                 categoryMap.putIfAbsent(category, new ArrayList<>());
 
-                // Create a new ApartmentOptionswithStatuses object
+
                 ApartmentOptionswithStatuses newApartmentOptionswithStatuses = new ApartmentOptionswithStatuses();
                 newApartmentOptionswithStatuses.setChecked(false);
                 newApartmentOptionswithStatuses.setOptionId(apartmentOption.getId());
@@ -117,7 +114,7 @@ public class ApartmentService {
                 newApartmentOptionswithStatuses.setDetails(apartmentOption.getDetails());
                 newApartmentOptionswithStatuses.setApartmentOptionCategory(category);
 
-                // Check if the current apartment option is linked to the apartment
+
                 for (ApartmentLinkedapartmentOptions linkedApartmentOption : apartmentLinkedapartmentOptionsList) {
                     if (linkedApartmentOption.getApartmentOption().getId() == apartmentOption.getId()) {
                         newApartmentOptionswithStatuses.setChecked(true);
@@ -125,15 +122,15 @@ public class ApartmentService {
                     }
                 }
 
-                // Add the new ApartmentOptionswithStatuses object to the list for the category
+
                 categoryMap.get(category).add(newApartmentOptionswithStatuses);
             }
 
-            // Create the ApartmentLinkedApartmentOption object
+
             ApartmentLinkedApartmentOption apartmentLinkedApartmentOption = new ApartmentLinkedApartmentOption();
             apartmentLinkedApartmentOption.setApartmentId(parseApartmentId);
 
-            // Convert the category map to a list
+
             List<ApartmentOptionsWithCategory> apartmentOptionsWithCategories = new ArrayList<>();
             for (Map.Entry<ApartmentOptionCategory, List<ApartmentOptionswithStatuses>> entry : categoryMap.entrySet()) {
                 ApartmentOptionsWithCategory optionsWithCategory = new ApartmentOptionsWithCategory();
