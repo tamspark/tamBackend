@@ -68,7 +68,7 @@ public class UserService {
             user.setForgetPasswordTokenCreationDate(LocalDateTime.now());
             user = userRepository.save(user);
 
-            String link = "https://tamfront.onrender.com//TAM/resetPassword/" + user.getForgetPasswordToken();
+            String link = "https://tamfront.onrender.com/TAM/resetPassword/" + user.getForgetPasswordToken();
 
             if (customUserDetailsService.exists(email)) {
                 emailService.send(user.getEmail(), emailService.buildResetEmail(user.getFirstName(), link));
