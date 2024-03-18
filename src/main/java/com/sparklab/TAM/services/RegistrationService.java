@@ -56,7 +56,7 @@ public class RegistrationService {
         }
         try {
             userRepository.save(userToSave);
-            String link = "http://localhost:3000/auth/tam/registration/" + userToSave.getConfirmationToken();
+            String link = "https://tamfront.onrender.com/auth/tam/registration/" + userToSave.getConfirmationToken();
             emailService.send(registerDTO.getEmail(), emailService.buildEmail(registerDTO.getFirstName(), link));
 
         } catch (Exception e) {

@@ -146,7 +146,7 @@ public class MessageService {
                         "        <p>Your reservation is scheduled from " + reservation.getArrival() + " to " + reservation.getDeparture() + ".</p>\n" +
                         "        <p>Please click the buttons below for assistance:</p>\n" +
                         "        <div class=\"btn-container\">\n" +
-                        "            <a class=\"btn green\" href=\"http://192.168.10.168:3000/kyc/" + reservation.getApartment().getId() + "/" + reservation.getId() + "/" + reservation.getGuestName() + "\">Need assistance</a>\n" +
+                        "            <a class=\"btn green\" href=\"https://tamfront.onrender.com/kyc/" + reservation.getApartment().getId() + "/" + reservation.getId() + "/" + reservation.getGuestName() + "\">Need assistance</a>\n" +
                         "            <a class=\"btn blue\" href=\"" + meetingService.generateMeetLink(new MeetingLinkDTO((long) reservation.getId(),reservation.getGuestName())) + "\">Check in</a>\n" +
                         "        </div>\n" +
                         "    </div>\n" +
